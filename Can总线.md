@@ -199,6 +199,20 @@ Can总线，对每一个数据位的时长进行了更为细致的划分，有�
 
 
 
+### FMI 过滤器匹配序号
+
+![image-20241105151442684](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20241105151442684.png)
+
+
+
+**作用就是，当传送一个报文ID 的 时候，设置的过滤器们 应该 以什么排序方式，决定谁先去匹配这个报文ID **
+
+
+
+
+
+
+
 ### Can总线的测试模式
 
 ![image-20241105091954646](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20241105091954646.png)
@@ -254,3 +268,53 @@ Can总线，对每一个数据位的时长进行了更为细致的划分，有�
 ### 错误处理和离线恢复
 
 ![image-20241105100923387](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20241105100923387.png)
+
+
+
+
+
+
+
+### 标准库的相关库函数
+
+初始化相关函数
+
+![QQ_1730787172533](C:\Users\ADMINI~1\AppData\Local\Temp\QQ_1730787172533.png)
+
+
+
+接受与发送相关函数
+
+![QQ_1730787573793](C:\Users\ADMINI~1\AppData\Local\Temp\QQ_1730787573793.png)
+
+
+
+工作模式相关函数
+
+![QQ_1730787756109](C:\Users\ADMINI~1\AppData\Local\Temp\QQ_1730787756109.png)
+
+
+
+获取错误的函数
+
+![image-20241105142347223](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20241105142347223.png)
+
+
+
+中断函数
+
+![QQ_1730787972142](C:\Users\ADMINI~1\AppData\Local\Temp\QQ_1730787972142.png)
+
+
+
+![image-20241105143855050](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20241105143855050.png)
+
+![QQ_1730788786923](C:\Users\ADMINI~1\AppData\Local\Temp\QQ_1730788786923.png)
+
+![image-20241105144011917](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20241105144011917.png)
+
+![image-20241105144030873](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20241105144030873.png)
+
+![image-20241105144126446](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20241105144126446.png)
+
+![image-20241106103357652](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20241106103357652.png)
