@@ -1,0 +1,108 @@
+### Cmake流程控制
+
+- if 条件流程控制
+- loop 循环流程控制  1.break  2. continue
+
+#### 条件IF
+
+![image-20250412201125330](https://mrzhb.oss-cn-chengdu.aliyuncs.com/image-20250412201125330.png)
+
+##### Example:
+
+```cmake
+cmake_minimum_required(VERSION 4.0)
+
+foreach(VAR RANGE 3)
+    message(${VAR})    
+endforeach()
+
+message("-------")
+#遍历元素
+set(mylist 1 2 3)
+
+foreach(Var IN LISTS mylist )
+    message(${Var})    
+endforeach()
+
+message("-------")
+#遍历元素后添加
+set(mylist 1 2 3)
+
+foreach(Var IN LISTS mylist ITEMS 4 f)
+    message(${Var})    
+endforeach()
+
+message("-------")
+#合并打印
+set(L1 1 2 3 4)
+set(L2 one two three)
+
+foreach(num IN ZIP_LISTS L1 L2)
+    message(num = ${num_0} , word = ${num_1})
+endforeach( )
+
+
+
+```
+
+结果如下
+
+![image-20250412210310572](https://mrzhb.oss-cn-chengdu.aliyuncs.com/image-20250412210310572.png)
+
+
+
+#### TRUE 常量 （不区分大小写）可直接吸入判断语句
+
+![image-20250414131435589](https://mrzhb.oss-cn-chengdu.aliyuncs.com/image-20250414131435589.png)
+
+#### FALSE 常量（不区分大小写）
+
+![image-20250414131529593](https://mrzhb.oss-cn-chengdu.aliyuncs.com/image-20250414131529593.png)
+
+
+
+### if(“字符串”)  条件表达式是带引号的字符串时 
+
+也就 **if ( "字符串") 这种格式**
+
+**只有当字符串上述真值常量的带引号形式，才会被判断为 真 ，否则均为假**
+
+（建议）不建议在条件判断中单独 使用字符串
+
+（建议）使用比较运算符对字符串进行判断
+
+
+
+
+
+### if( 变量 )
+
+只要**它的值**不是 上面的 **FALSE 常量** 均判断为真
+
+- 判断为TRUE的情况  : 变量的值不等于 FALSE 常量
+- 判断为FALSE的情况 : 变量的值等于FALSE 常量
+- 对于未定义的变量的值 为 “” （空串），判断为FALSE
+
+
+
+### if(变量) 和 if(${变量}) 的区别
+
+**if (变量) 判断的是变量的值 而 if(${变量})等价于 if("字符串“)**
+
+![image-20250414132927598](https://mrzhb.oss-cn-chengdu.aliyuncs.com/image-20250414132927598.png)
+
+![image-20250414132938129](https://mrzhb.oss-cn-chengdu.aliyuncs.com/image-20250414132938129.png)
+
+
+
+### 逻辑运算符(只能大写)
+
+- AND
+- OR
+- NOT
+
+
+
+### 比较运算符
+
+![image-20250414181557510](https://mrzhb.oss-cn-chengdu.aliyuncs.com/image-20250414181557510.png)
